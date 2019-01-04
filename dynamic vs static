@@ -1,0 +1,15 @@
+Ques: What is the difference between dynamicall typed language(JS) vs. a statically typed language(Java)
+
+Ans: In a statically written language such as Java, you have to specify exactly which types each variable will hold.
+This helps prevent runtime error.
+  ex. String a = 'moo';
+      a = 1; // Error
+     
+     In a dynamically written language like JS, the type of variable is dynamically evaluated at runtime.
+Therefore, you can change type along the way.
+  ex. var a = 'moo';
+    typeof(a); // String
+      a = 1;
+    typeof(a); // Number
+Thus, writing is much quicker than Java but errors will occur at runtime.
+        
