@@ -1,0 +1,28 @@
+"use strict" mode allows you to place a program or a function in a strict operating context.
+
+How to use: 
+1. for entire file: "use strict"; 
+2. for only the function scope:
+   function foo() {
+    "use strict";
+    } 
+
+Benefits:
+1. it makes debugging easier - code errors that would have been ignored or failed silently in non-strict mode will now throw an error
+2. accidental global declarations will now throw an error
+  ex. var theVal = 0;
+      thVal = 1; //accidental misspelling, thus global declaration
+      if (theVal > 0) {
+        console.log("Hello"); }
+      // this code will throw an error in strict mode
+3. prevents you from using reserved words for future versions of JS
+  ex. var let = 1; // will throw an error
+4. you cannot use the delete keyword to delete variables, arguments, and functions
+5. makes the eval() keyword much safer to use - the variables defined in eval only exist within the eval scope
+  ex. var a = 1;
+      eval("var a = 2");
+      console.log(a); // this will output 2
+  ex. "use strict";
+      var a = 1;
+      eval("var a = 2");
+      console.log(a); // this will output 1
