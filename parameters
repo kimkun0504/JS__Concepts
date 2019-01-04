@@ -1,0 +1,34 @@
+Ques: Does JS pass parameters as values or as reference?
+ex. var a;
+    function foo(a){
+    }
+
+primitive types:
+1. Boolean
+2. Numbers
+3. String
+4. Undefined
+5. Null
+
+non-primitive types:
+1. Objects
+
+Ans: Primitive types in JS are passed by value while objects are passed by reference
+
+If the argument is passed by value, then when you change the variable inside a function, the outer variable remains untouched.
+So basically it is creating a copy of that value.
+
+If the argument is passed by reference, then you are passing something that points to the actual value.
+Therefore, changes made by the reference will also change the outer value.
+However, you cannot change what the object points to, only the properties inside it.
+  ex. var a = {'moo': 'foo'};
+      function foo(a) {
+        a.too = 'moo';
+        }
+      foo(a);
+      console.log(a); // Object {moo: "too", too: "moo"};
+      
+  ex. function foo(a) {
+        a = {'too': 'moo'};
+      } // this is invalid! You cannot reassign the value
+        
