@@ -1,0 +1,9 @@
+Ques: What is the difference between null and undefined?
+
+Ans:
+1. both represent empty value
+2. undefined is automatically assigned to uninitialized variables while null is manually assigned
+3. null is used by programmers
+4. null is a value in JS, but it an absence of a value in static languages
+5. typeof null = object // JS incorrectly identifies null as an object. However, in reality typeof null is null
+6. null == undefined, undefined == null // both true
